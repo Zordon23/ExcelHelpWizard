@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width">
+    	<meta name="description" content="Affordable and professional web design">
+	  	<meta name="keywords" content="web design, affordable web design, professional web design">
+  		<meta name="author" content="Nick Stucchi">
+		<title>Excel Help Wizard | Educational | Formulas</title>
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div id="branding">
+					<h1><a href="index.html"><span class="highlight">Excel</span> Help Wizard</a></h1>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="personal.html">Personal</a></li>
+						<li class="current"><a href="educational.html">Educational</a></li>
+						<li><a href="professional.html">Professional</a></li>
+						<li><a href="#">Sign In</a></li>
+						<li><a href="#">Sign Up</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section id="newsletter">
+			<div class="container">
+				<form>
+					<input type="email" placeholder="Search...">
+					<button type="submit" class="button_1">GO</button>
+				</form>
+				<ul>
+					<li><a href="educational.html">Charts & Graphs</a></li>
+					<li class="current"><a href="formulas.html">Formulas</a></li>
+					<li><a href="tips.html">Tips & Tricks</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="main">
+			<div class="container">
+				<article id="main-col-ed">
+					<h1 class="page-title">Helpful Formulas To Use:</h1>
+					<ul id="services">
+						<li>
+							<h3>Average Numbers:</h3>
+							<p>AVERAGE is an automatic function in Excel. In most cases, you'll supply a range of cells to average, and the function will return the result. However, you can also supply individual arguments to the function, in cases where cells are non-adjacent.</p>
+							<p>The generic formula looks like this: =AVERAGE(range)</p>
+							<img src="img/average.png">
+						</li>
+						<li>
+							<h3>Weighted Average:</h3>
+							<p>To calculated a weighted average, you can use the SUMPRODUCT function together with the SUM function. The SUMPRODUCT function multiples arrays together and sums the result.</p>
+							<p>The generic formula looks like this: =SUMPRODUCT(numbers,weights) / SUM(weights)</p>
+							<img src="img/weighted.png">
+						</li>
+						<li>
+							<h3>Round A Number To "n" Significant Digits</h3>
+							<p>If you need to round a number to a given (variable) number of specified digits or figures, you can do so with an elegant formula that uses the ROUND and LOG10 functions. To sum up this formula:</p>
+							<p>1. ABS coverts the value to an absolute (positive) value<br>2. LOG10 gets the exponent<br>3. INT trims off the decimal part of the exponent<br>4. The formula uses the exponent and the supplied significant digits to figure out the right number of digits to give ROUND<br>5. ROUND rounds the number using the digits supplied</p>
+							<p>The generic formula looks this: =ROUND(number,digits - (1 + INT(LOG10(number)))))</p>
+							<img src="img/round.png">
+						</li>
+						<li>
+							<h3>Calculate Percent Variance:</h3>
+							<p>If you need to calculate percent variance you can use a simple formula that divides the difference between new number and the original number by the original number. This formula can be used to calculate things like variance between this year and last year, variance between a budgeted amount with an actual amount, and so on.</p>
+							<p>The generic formula looks like this: =(new - original) / original</p>
+							<img src="img/variance.png">
+							<h1>NOTE:</h1>
+							<p>If have a negative value for the original number, the above formula won't work and can be adjusted by adding the ABS function: =(new - original) / ABS(original)</p>
+						</li>
+						<li>
+							<h3>Calculate A Ratio From Two Numbers:</h3>
+							<p>To generate the ratio of two numbers to each other (e.g. 4:3, 16:9, etc.), you can do using division, the GCD function, and concatenation. In the generic form of the formula (above) num1 represents the first number (the antecedent) and num2 represents the second number (the consequent).</p>
+							<p>On the left, the GCD function is used to calculated the greatest common divisor (GCD) of the two numbers. Then the first number is divided by the GCD. On the right, the same operations are performed with the second number. Next, the result of the right and left operations are joined together using concatenation, with the colon (":") as a separator.</p>
+							<p>The generic formula looks this: =num1 / GCD(num1,num2 &":"&num2 / GCD(num1,num2)</p>
+							<img src="img/ratio.png">
+						</li>
+					</ul>
+				</article>
+
+				<aside id="sidebar-ed">
+					<div id="dark-ed">
+						<h3>Don't See What You Need? Let Us Know</h3>
+						<form class="quote">
+							<div>
+								<label>Name</label><br>
+								<input type="text" placeholder="Name">
+							</div>
+							<div>
+								<label>Email</label><br>
+								<input type="email" placeholder="Email Address">
+							</div>
+							<div>
+								<label>Message</label><br>
+								<textarea placeholder="Message"></textarea>
+							</div>
+							<button class="button_1" type="submit">Send</button>
+						</form>
+					</div>
+				</aside>
+			</div>
+		</section>
+
+		<footer>
+			<ul class="social">
+				<li>&copy; Nick Stucchi</li>
+				<li><a title="Privacy Policy" href="#">Privacy Policy</a></li>
+				<li><a title="Terms of Service" href="#">Terms of Service</a></li>
+				<li><a title="Download Excel" href="#">Download Excel</a></li>
+				<li><a href="https://www.facebook.com" target="blank"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://www.twitter.com" target="blank"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://www.instagram.com" target="blank"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="https://www.youtube.com" target="blank"><i class="fa fa-youtube"></i></a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
